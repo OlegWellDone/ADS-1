@@ -3,18 +3,42 @@
 #include "alg.h"
 
 
-bool checkPrime(uint64_t value) {
-// вставьте код функции
+bool checkPrime(uint64_t value){
+for(int i=(value-1); i>1; i--){
+if(value % i == 0){return false;}
+else{return true;}
+}
 }
 
-uint64_t nPrime(uint64_t n) {
-// вставьте код функции
+uint64_t nPrime(uint64_t n){
+uint64_t chicha = 1;
+uint64_t id = 1;
+while(id != n){
+chicha++;
+if(checkPrime(chicha) == true){
+id++;
+}
+}
+return chicha;
 }
 
-uint64_t nextPrime(uint64_t value) {
-// вставьте код функции
+uint64_t nextPrime(uint64_t value){
+uint64_t i = 1;
+uint64_t blizko;
+bool ex = false;
+while(ex == false){
+if(checkPrime(blizko+i) == true){ex = true; return value+i;}
+if(checkPrime(blizko-i) == true){ex = true; return value-i;}
+i++;
+}
 }
 
-uint64_t sumPrime(uint64_t hbound) {
-// вставьте код функции
+uint64_t sumPrime(uint64_t hbound){
+uint64_t i = 2;
+uint64_t sum = 0;
+while(i < hbound){
+if(checkPrime(i)== true){sum = sum+i};
+i++;	
+}
+return sum;
 }
