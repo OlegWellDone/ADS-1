@@ -4,8 +4,8 @@
 
 
 bool checkPrime(uint64_t value) {
-for(int i = (value-1); i > 1; i--) {
-if(value % i == 0)
+for(int i = value; i > 1; i--) {
+if((value % i == 0)and(i != value))
 {return false;
 } else
 {return true;
