@@ -5,8 +5,11 @@
 
 bool checkPrime(uint64_t value) {
 for(int i = (value-1); i > 1; i--) {
-if(value % i == 0) {return false;}
-else {return true;}
+if(value % i == 0)
+{return false;
+}else
+{return true;
+}
 }
 }
 
