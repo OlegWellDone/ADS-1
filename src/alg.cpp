@@ -27,15 +27,16 @@ return chicha;
 }
 
 uint64_t nextPrime(uint64_t value) {
-uint64_t i = 1;
 uint64_t blizko;
-bool ex = false;
-while(ex == false) {
-if(checkPrime(value+i)) {ex = true; blizko = value+i;}
-if(checkPrime(value-i)) {ex = true; blizko = value-i;}
-i++;
+while(uint64_t i < value) {
+if(checkPrime(value + i)) {
+  blizko = value + i;
 }
-return blizko;
+  if(checkPrime(value - i)) {
+  blizko = value - i;
+}
+}
+  return blizko;
 }
 
 uint64_t sumPrime(uint64_t hbound) {
