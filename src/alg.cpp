@@ -15,13 +15,13 @@ return true;
 }
 
 uint64_t nPrime(uint64_t n) {
-uint64_t chicha = 1;
-uint64_t id = 0;
+uint64_t chicha = 2;
+uint64_t id = 2;
 while(id != n) {
-if(checkPrime(chicha)) {  
+chicha++;
+if(checkPrime(chicha)) {
 id++;
 }
-chicha++;
 }
 return chicha;
 }
@@ -31,8 +31,8 @@ uint64_t i = 1;
 uint64_t blizko;
 bool ex = false;
 while(ex == false) {
-if(checkPrime(blizko+i)) {ex = true; blizko = value+i;}
-if(checkPrime(blizko-i)) {ex = true; blizko = value-i;}
+if(checkPrime(value+i)) {ex = true; blizko = value+i;}
+if(checkPrime(value-i)) {ex = true; blizko = value-i;}
 i++;
 }
 return blizko;
@@ -40,7 +40,7 @@ return blizko;
 
 uint64_t sumPrime(uint64_t hbound) {
 uint64_t i = 2;
-uint64_t sum = 1;
+uint64_t sum = 0;
 while(i < hbound) {
 if(checkPrime(i)) {sum = sum+i;}
 i++;
