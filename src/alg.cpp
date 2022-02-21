@@ -43,13 +43,11 @@ if (checkPrime(value + i)) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-uint64_t i = 1;
 uint64_t sum = 0;
-while(i < hbound) {
+for (uint64_t i = 0; i < hbound; i++) {
 if (checkPrime(i)) {
 sum = sum + i;
 }
-i++;
 }
 return sum;
 }
