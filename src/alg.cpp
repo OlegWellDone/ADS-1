@@ -40,10 +40,10 @@ if (checkPrime(value + i)) {
 
 uint64_t sumPrime(uint64_t hbound) {
 uint64_t sum = 0;
-for (uint64_t i = 0; i < hbound; i++) {
-if (checkPrime(i)) {
-sum = sum + i;
-}
-}
-return sum;
+  for (int i = 0; i < hbound; i++) {
+    if (checkPrime(i)) {
+      sum = sum + i;
+    }
+  }
+  return sum;
 }
