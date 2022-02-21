@@ -32,19 +32,23 @@ uint64_t i;
 while(i < value) {
 if (checkPrime(value + i)) {
   blizko = value + i;
+  break;
 }
   if (checkPrime(value - i)) {
   blizko = value - i;
+  break;
 }
 }
   return blizko;
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-uint64_t i = 2;
+uint64_t i = 1;
 uint64_t sum = 0;
 while(i < hbound) {
-if (checkPrime(i)) {sum = sum+i;}
+if (checkPrime(i)) {
+sum = sum + i;
+}
 i++;
 }
 return sum;
