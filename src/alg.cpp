@@ -18,10 +18,10 @@ uint64_t nPrime(uint64_t n) {
 uint64_t chicha = 1;
 uint64_t id = 0;
 while(id != n) {
+chicha++;
 if (checkPrime(chicha)) {
 id++;
 }
-chicha++;
 }
 return chicha;
 }
