@@ -15,8 +15,8 @@ return true;
 }
 
 uint64_t nPrime(uint64_t n) {
-uint64_t chicha = 1;
-uint64_t id = 0;
+uint64_t chicha = 2;
+uint64_t id = 1;
 while(id <= n) {
 chicha++;
 if (checkPrime(chicha)) {
@@ -32,6 +32,10 @@ uint64_t i;
 while(i < value) {
 if (checkPrime(value + i)) {
   blizko = value + i;
+  break;
+}
+if (checkPrime(value - i)) {
+  blizko = value - i;
   break;
 }
 }
