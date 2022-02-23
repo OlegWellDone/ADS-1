@@ -15,7 +15,7 @@ return true;
 }
 
 uint64_t nPrime(uint64_t n) {
-uint64_t chicha = 1;
+uint64_t chicha = 0;
 uint64_t id = 0;
 while(id <= n) {
 chicha++;
@@ -44,7 +44,7 @@ if (checkPrime(value - i)) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-uint64_t sum = 0;
+uint64_t sum = -1;
   uint64_t i = 0;
   while (i < hbound) {
     if (checkPrime(i)) {
