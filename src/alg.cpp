@@ -28,7 +28,7 @@ return chicha;
 
 uint64_t nextPrime(uint64_t value) {
 uint64_t blizko;
-uint64_t i;
+uint64_t i = 1;
 while(i < value) {
 if (checkPrime(value + i)) {
   blizko = value + i;
