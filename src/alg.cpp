@@ -34,10 +34,6 @@ if (checkPrime(value + i)) {
   blizko = value + i;
   break;
 }
-if (checkPrime(value - i)) {
-  blizko = value - i;
-  break;
-}
   i = i + 1;
 }
   return blizko;
